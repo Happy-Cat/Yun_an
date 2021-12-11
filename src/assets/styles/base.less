@@ -1,0 +1,149 @@
+@primary-bg: #F9BF3C;
+@primary-font-color: #211F32;
+@font-color: #D3D3D7;
+@light-color: #DFA524;
+@black-color: #211F32;
+@long-color: #38aa7d;
+@short-color: #f65472;
+@danger-color: #E94A6B;
+
+@font-face {
+  // 引入Roboto字体优先第一，保证数字等宽
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html,body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial,
+  'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+  'Noto Color Emoji';
+  // background: #211F32;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+html {
+  font-size: 32px * 2;
+  // font-size: 32 / 2880 * 200vw;
+}
+.width-limit {
+  max-width: 1440px;
+  min-width: 1280px;
+}
+button.primary-color {
+  background: @primary-bg;
+  font-size: 16px;
+  color: @primary-font-color;
+  letter-spacing: 0;
+  line-height: 16px;
+  font-weight: 500;
+  border-color: @primary-bg;
+  &:hover, &:active {
+    background: @primary-bg;
+    color: @primary-font-color;
+    border-color: @primary-bg;
+    opacity: .8;
+  }
+  &:focus {
+    background: @primary-bg;
+    color: @primary-font-color;
+    border-color: @primary-bg;
+  }
+};
+.font-color {
+  color: @font-color;
+}
+.light-color {
+  color: @light-color;
+}
+.black-color {
+  color: @black-color;
+}
+.long-color {
+  color: @long-color;
+}
+.short-color {
+  color: @short-color;
+}
+.danger-color {
+  color: @danger-color;
+}
+.el-checkbox {
+  line-height: 14px;
+}
+.el-checkbox__input.is-checked .el-checkbox__inner {
+  background-color: @primary-bg;
+  border-color: @primary-bg;
+}
+.el-checkbox__inner::after {
+  border: 1px solid #000;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+.el-checkbox__label, .el-checkbox__input.is-checked+.el-checkbox__label{
+  font-size: 14px;
+  color: #D3D3D7;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.el-menu-item:hover {
+  overflow: hidden;
+  .layout-icon {
+    position: relative;
+    left: -40px;
+    filter: drop-shadow(#F9BF3C 40px 0);
+  }
+}
+.layout-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  &.icon-telegram-zh {
+    background: url("../images/community/icon-telegram.svg");
+    background-size: contain;
+  }
+  &.icon-telegram-en {
+    background: url("../images/community/icon-telegram.svg");
+    background-size: contain;
+  }
+  &.icon-discord {
+    background: url("../images/community/icon-discord.svg");
+    background-size: contain;
+  }
+  &.icon-reddit {
+    background: url("../images/community/icon-reddit.svg");
+    background-size: contain;
+  }
+  &.icon-twitter {
+    background: url("../images/community/icon-twitter.svg");
+    background-size: contain;
+  }
+  &.icon-medium {
+    background: url("../images/community/icon-medium.svg");
+    background-size: contain;
+  }
+}
+@media screen and (max-width: 828px) {
+  html {
+    font-size: 16 / 750 * 200vw;
+  }
+  .width-limit {
+    max-width: 100%;
+    min-width: 100%;
+  }
+  .el-checkbox__label, .el-checkbox__input.is-checked+.el-checkbox__label{
+    font-size: 28px;
+  }
+  button.primary-color {
+    font-size: 32px;
+  }
+}

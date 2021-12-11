@@ -1,0 +1,87 @@
+@menu-bg: #3A393F;
+@menu-font-color: #D3D3D7;
+@active-bg: #47464E;
+@active-color: #F9BF3C;
+
+@primary-bg: #F9BF3C;
+@primary-font-color: #211F32;
+
+.el-popper.is-light{
+  border: 0;
+}
+.el-menu--horizontal {
+  .el-menu--popup {
+    background: @menu-bg;
+    .el-menu-item {
+      height: auto;
+      background-color: @menu-bg;
+      color: #D3D3D7;
+      padding: 14px 12px;
+      line-height: 1;
+      font-size: 14px;
+      &:hover {
+        background: @active-bg;
+        color: @active-color;
+      }
+      &.is-active {
+        color: @active-color;
+      }
+    }
+  }
+}
+.el-dropdown__popper.el-popper[role=tooltip] {
+  border: 0;
+}
+.el-dropdown__popper.el-popper[role=tooltip] .el-popper__arrow::before {
+  border: 1px solid @menu-bg;
+}
+.el-popper.is-light .el-popper__arrow::before {
+  background: @menu-bg;
+}
+.el-dropdown-menu { 
+  background-color: @menu-bg;
+  .el-dropdown-menu__item {
+    color: #D3D3D7;
+    &:hover {
+      background: @active-bg;
+      color: @active-color;
+    }
+  }
+}
+.el-dialog {
+  background: #454354;
+  .el-dialog__close {
+    font-size: 22px;
+  }
+}
+.el-button.is-disable, .el-button.is-disabled, .el-button.is-disabled:focus, .el-button.is-disabled:hover  {
+  &.primary-color {
+    background: @primary-bg;
+    color: @primary-font-color;
+    border-color: @primary-bg;
+  }
+  opacity: 0.6;
+}
+.el-overlay {
+  background-color: rgba(0,0,0,.8);
+}
+.el-message-box { 
+  width: 90%;
+  background: #454354;
+  border: 0;
+  font-size: 14px;
+  .el-message-box__title {
+    color: #FFFFFF;
+  }
+  .el-message-box__content {
+    color: #D3D3D7;
+    letter-spacing: 0;
+  }
+  .el-icon-close {
+    font-size: 40px;
+    color: #9C9BA4;
+  }
+}
+.el-popper {
+  border-radius: 4px;
+}
