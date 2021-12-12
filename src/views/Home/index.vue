@@ -3,7 +3,7 @@
     <div class="home-banner">
       <div class="banner-info"></div>
     </div>
-    <div class="home-item">
+    <div class="home-item item1">
       <label class="info-title is-phone">
         <i></i>
         <span>记录怀孕周期，定时提醒孕期体检</span>
@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <div class="home-item">
+    <div class="home-item item2">
       <label class="info-title is-phone">
         <i></i>
         <span>专业医生在线解答</span>
@@ -35,7 +35,7 @@
         </div>
       </div>
     </div>
-    <div class="home-item">
+    <div class="home-item item3">
       <label class="info-title is-phone">
         <i></i>
         <span>孕期知识在线看</span>
@@ -78,13 +78,15 @@ export default {
 <style lang='less'>
 .page-home {
   background: #F0F2F4;
+  min-width: 1200px;
   .home-banner {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 512px;
-    background: linear-gradient(90deg, #C674DB 0%, #A24CE0 100%);
+    background: url("./images/pc-banner.png") no-repeat center center;
+    background-size: 1921px 512px;
     .banner-info {
       width: 1200px;
     }
@@ -107,7 +109,6 @@ export default {
       >i {
         width: 57px;
         height: 65px;
-        background: #9174DB;
         margin-right: 15px;
       }
       &.is-phone {
@@ -119,9 +120,8 @@ export default {
       align-items: center;
       width: 1200px;
       .item-icon {
-        width: 258px;
-        height: 424px;
-        background: #000;
+        width: 287px;
+        height: 449px;
         margin-right: 75px;
         flex-shrink: 0;
       }
@@ -145,6 +145,49 @@ export default {
         flex-direction: row-reverse;
       }
     }
+
+    &.item1 {
+      .info-title {
+        >i {
+          background: url("./images/01.png") no-repeat;
+          background-size: contain;
+        }
+      }
+      .item-box {
+        .item-icon {
+          background: url("./images/line1.png") no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+    &.item2 {
+      .info-title {
+        >i {
+          background: url("./images/02.png") no-repeat;
+          background-size: contain;
+        }
+      }
+      .item-box {
+        .item-icon {
+          background: url("./images/line2.png") no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+    &.item3 {
+      .info-title {
+        >i {
+          background: url("./images/03.png") no-repeat;
+          background-size: contain;
+        }
+      }
+      .item-box {
+        .item-icon {
+          background: url("./images/line3.png") no-repeat;
+          background-size: contain;
+        }
+      }
+    }
   }
   .home-footer {
     display: flex;
@@ -164,7 +207,10 @@ export default {
     }
   }
   @media screen and (max-width: 828px) {
+    min-width: 100%;
     .home-banner {
+      background: url("./images/phone-banner.png") no-repeat;
+      background-size: contain;
       .banner-info {
         width: 100%;
       }

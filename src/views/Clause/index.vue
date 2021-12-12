@@ -1,5 +1,8 @@
 <template>
   <div class="page-clause">
+    <div class="logo-line">
+      <i @click="$router.push('/')" class="icon-logo"></i>
+    </div>
     <div class="clause-info">
       <span class="info-title">孕安服务条款</span>
       <div class="info-desc">
@@ -303,13 +306,27 @@ export default {
   align-items: center;
   width: 100%;
   background: #f0f2f4;
+  .logo-line {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 30px;
+    margin-top: 38px;
+    .icon-logo {
+      cursor: pointer;
+      display: inline-block;
+      width: 138px;
+      height: 46px;
+      background: url("./images/logo.png") no-repeat;
+      background-size: contain;
+    }
+  }
   .clause-info {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     max-width: 1200px;
-    padding: 164px 30px 80px;
+    padding: 80px 30px 80px;
     .info-title {
       font-size: 28px;
       font-weight: 500;
