@@ -285,7 +285,7 @@
       </div>
     </div>
     <div class="home-footer">
-      <span class="clause" @click="$router.push('/clause')">孕安《服务条款》《隐私保护》</span>
+      <span class="clause">孕安 <a href="http://www.msyx.info/serviceterms">《服务条款》</a> <a href="http://www.msyx.info/privacy">《隐私保护》</a> </span>
       <span>Copyright © 2021 -2023 All Right Reserved 码上有喜版权所有</span>
     </div>
   </div>
@@ -376,6 +376,10 @@ export default {
       font-weight: 400;
       color: #C3C3C3;
       line-height: 36px;
+      a {
+        color: #C3C3C3;
+        text-decoration: none;
+      }
       .clause {
         cursor: pointer;
       }
