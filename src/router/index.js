@@ -9,9 +9,14 @@ const routes = [
     component: () => import(/* webpackChunkName: "Home" */ '../views/Home/index.vue'),
   },
   { 
-    path: "/clause",
-    name: "clause",
+    path: "/serviceterms",
+    name: "serviceterms",
     component: () => import(/* webpackChunkName: "Clause" */ '../views/Clause/index.vue'),
+  },
+  { 
+    path: "/privacy",
+    name: "privacy",
+    component: () => import(/* webpackChunkName: "Privacy" */ '../views/Privacy/index.vue'),
   },
   {
     path: '/:pathMatch(.*)',

@@ -1,7 +1,11 @@
 <template>
   <div class="page-home">
     <div class="home-banner">
-      <div class="banner-info"></div>
+      <button @click="download('ios')" class="ios-btn"></button>
+      <button @click="download('android')" class="android-btn"></button>
+      <div class="banner-info">
+        <i class="icon-qrcode"></i>
+      </div>
     </div>
     <div class="home-item item1">
       <label class="info-title is-phone">
@@ -52,7 +56,7 @@
       </div>
     </div>
     <div class="home-footer">
-      <span class="clause">孕安 <a href="http://www.msyx.info/serviceterms">《服务条款》</a> <a href="http://www.msyx.info/privacy">《隐私保护》</a> </span>
+      <span class="clause">孕安 <router-link to="serviceterms">《服务条款》</router-link> <router-link to="privacy">《隐私保护》</router-link> </span>
       <span>Copyright © 2021 -2023 All Right Reserved 码上有喜版权所有</span>
     </div>
   </div>
@@ -71,7 +75,13 @@ export default {
   mounted() {
   },
   methods: {
-    
+    download(type) {
+      if (type === 'ios') {
+        window.open('ios')
+      } else {
+        window.open('android')
+      }
+    },
   }
 };
 </script>
@@ -80,6 +90,7 @@ export default {
   background: #F0F2F4;
   min-width: 1200px;
   .home-banner {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,8 +98,25 @@ export default {
     height: 512px;
     background: url("./images/pc-banner.png") no-repeat center center;
     background-size: 1921px 512px;
+    .ios-btn {
+      display: none;
+    }
+    .android-btn {
+      display: none;
+    }
     .banner-info {
+      position: relative;
       width: 1200px;
+      height: 100%;
+      background: rgba(0,0,0, .3);
+      .icon-qrcode {
+        position: absolute;
+        top: 300px;
+        left: 0;
+        background: #fff;
+        width: 100px;
+        height: 100px;
+      }
     }
   }
   .home-item {
@@ -202,12 +230,12 @@ export default {
     color: #C3C3C3;
     line-height: 23px;
     margin-top: 80px;
-    a {
-      color: #C3C3C3;
-      text-decoration: none;
-    }
     .clause {
       cursor: pointer;
+      a  {
+        color: #C3C3C3!important;
+        text-decoration: none;
+      }
     }
   }
   @media screen and (max-width: 828px) {
@@ -215,8 +243,28 @@ export default {
     .home-banner {
       background: url("./images/phone-banner.png") no-repeat;
       background-size: contain;
+      .ios-btn {
+        width: 180px;
+        height: 60px;
+        position: absolute;
+        top: 190px;
+        left: 60px;
+        display: block;
+        opacity: 0;
+        outline: none;
+      }
+      .android-btn {
+        width: 180px;
+        height: 60px;
+        position: absolute;
+        top: 270px;
+        left: 60px;
+        display: block;
+        opacity: 0;
+        outline: none;
+      }
       .banner-info {
-        width: 100%;
+        display: none;
       }
     }
     .home-item {
