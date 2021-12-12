@@ -5,6 +5,8 @@
       <button @click="download('android')" class="android-btn"></button>
       <div class="banner-info">
         <i class="icon-qrcode"></i>
+        <button @click="download('ios')" class="ios-btn"></button>
+        <button @click="download('android')" class="android-btn"></button>
       </div>
     </div>
     <div class="home-item item1">
@@ -108,14 +110,35 @@ export default {
       position: relative;
       width: 1200px;
       height: 100%;
-      background: rgba(0,0,0, .3);
       .icon-qrcode {
         position: absolute;
-        top: 300px;
+        top: 310px;
         left: 0;
         background: #fff;
         width: 100px;
         height: 100px;
+      }
+      .ios-btn {
+        cursor: pointer;
+        width: 130px;
+        height: 40px;
+        position: absolute;
+        top: 310px;
+        left: 140px;
+        display: block;
+        opacity: 0;
+        outline: none;
+      }
+      .android-btn {
+        cursor: pointer;
+        width: 130px;
+        height: 40px;
+        position: absolute;
+        top: 365px;
+        left: 140px;
+        display: block;
+        opacity: 0;
+        outline: none;
       }
     }
   }
