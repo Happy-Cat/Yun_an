@@ -113,8 +113,9 @@ export default {
       .icon-qrcode {
         position: absolute;
         top: 310px;
-        left: 0;
-        background: #fff;
+        left: 10px;
+        background: url('./images/qrcode.png') no-repeat;
+        background-size: contain;
         width: 100px;
         height: 100px;
       }
